@@ -12,7 +12,7 @@
 
 <body>
     <div class="main-outer">
-        <div class="inner-wrapper">
+        <div class="inner-wrapper container">
             <div class="top-title-wrapper">
                 <h1>Quiz App</h1>
             </div>
@@ -35,17 +35,18 @@
                 </div>
                 <div class="controller-item">
                     <div class="item-inner">
-                        <span>Q - 0/10</span>
+                        <span>Q :<span id="qNumber">0</span>/10</span>
                     </div>
                 </div>
                 <div class="controller-item">
                     <div class="item-inner">
-                        <span style="white-space: nowrap;">Result : (C:10) | (W:10) | (S:5)</span>
+                        <span style="white-space: nowrap;">Result : (C:<span id="c">0</span>) | (W:<span
+                                id="w">0</span>) | (S:<span id="s">0</span>)</span>
                     </div>
                 </div>
                 <div class="controller-item">
                     <div class="item-inner" style="padding: 0;">
-                        <div class="btn btn-primary" onclick="start()" style="width:100%;">Start</div>
+                        <div class="btn btn-primary" onclick="start()" style="width:100%;" id="btn-start">Start</div>
 
                     </div>
                 </div>
@@ -62,11 +63,31 @@
                 </h2>
             </div>
             <div class="button-bar">
-                <button class="btn btn-outline-dark">Skip</button>
+                <button class="btn btn-outline-danger" onclick="reset()">Reset</button>&nbsp;
+                <button class="btn btn-outline-dark" onclick="skipQuiz()">Skip</button>&nbsp;
                 <button class="btn btn-primary" onclick="submitData()">Submit</button>
             </div>
 
 
+        </div>
+        <div class="container">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>First Number</th>
+                        <th>Last Number</th>
+                        <th>Operator</th>
+                        <th>Correct Anwser</th>
+                        <th>User Anwser</th>
+                        <th>Is Correct</th>
+                        <th>Is Skipped</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody id="anwser-body">
+
+                </tbody>
+            </table>
         </div>
     </div>
     <script src="main.js">

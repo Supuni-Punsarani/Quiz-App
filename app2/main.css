@@ -7,22 +7,23 @@
 
 .main-outer {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     background-image: url("https://img.freepik.com/free-photo/football-trainer-teaching-his-pupils_23-2149707974.jpg?t=st=1729323785~exp=1729327385~hmac=d2d7710db7d7a9828268ad7f35ec6eb8800494112d58792dc1cdfb4a84a53390&w=1060");
     background-position: center;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    flex-direction: column;
 }
 
 .inner-wrapper {
-    width: 80%;
+    /* width: 80%; */
     height: 80%;
     background-color: rgb(255, 255, 255, 0.9);
     display: flex;
-    ;
+    margin-bottom: 10px;
     flex-direction: column;
 }
 
